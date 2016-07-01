@@ -11,11 +11,13 @@ Quickstart: Run the demo
 
     git clone https://github.com/cumulusnetworks/cldemo-vagrant
     cd cldemo-vagrant
+    git checkout 2.5.x
     vagrant up oob-mgmt-server oob-mgmt-switch leaf01 leaf02 spine01 spine02 server01 server02
     vagrant ssh oob-mgmt-server
     sudo su - cumulus
     git clone https://github.com/cumulusnetworks/cldemo-automation-puppet
     cd cldemo-automation-puppet
+    git checkout 2.5.x
     sudo su
     wget https://apt.puppetlabs.com/puppetlabs-release-pc1-trusty.deb
     dpkg -i puppetlabs-release-pc1-trusty.deb
