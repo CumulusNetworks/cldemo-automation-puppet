@@ -27,8 +27,7 @@ Before running this demo, install [VirtualBox](https://www.virtualbox.org/wiki/D
     sed -i 's/-Xmx2g/-Xmx512m/g' /etc/default/puppetserver
     service puppetserver restart
     exit
-    python install-puppet-agents.py leaf01,leaf02,spine01,spine02,server02
-    ssh server01
+    python install-puppet-agents.py leaf01,leaf02,spine01,spine02,server01,server02
     wget 172.16.2.101
     cat index.html
 
