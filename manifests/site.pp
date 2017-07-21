@@ -7,23 +7,18 @@ node default {
 
 # We use the hostname to figure out what roles we should be assigning to the
 # node. For leaves and spines, we can use a catch-all regular expression.
-node /^leaf\d+.lab.local$/ {
+node /^leaf\d+$/ {
     include quagga
     include ifupdown2
 }
 
-node /^spine\d+.lab.local$/ {
+node /^spine\d+$/ {
     include quagga
     include ifupdown2
 }
 
-# Node definitions may not overlap, so we have to define the servers separately
-# since they include different modules.
-node server01.lab.local {
-    include ifupdown
-}
 
-node server02.lab.local {
+node server02 {
     include ifupdown
     include apache
 }
