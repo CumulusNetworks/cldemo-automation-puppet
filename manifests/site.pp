@@ -20,5 +20,9 @@ node /^spine\d+.simulation$/ {
 
 node server02.simulation {
     include ifupdown
+}
+
+node server02.simulation {
+    include ifupdown
     include apache
 }
