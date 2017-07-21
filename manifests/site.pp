@@ -18,7 +18,7 @@ node /^spine\d+.simulation$/ {
 }
 
 
-node server02.simulation {
+node server01.simulation {
     include ifupdown
 }
 
