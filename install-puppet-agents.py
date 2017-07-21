@@ -22,14 +22,14 @@ def go(host):
                      'sudo dpkg -i puppetlabs-release-pc1-xenial.deb',
                      'sudo apt-get update',
                      'sudo apt-get install puppet-agent -qy',
-                     "sudo echo 'server = server01.lab.local' | sudo tee /etc/puppetlabs/puppet/puppet.conf -a",
+                     "sudo echo 'server = server01' | sudo tee /etc/puppetlabs/puppet/puppet.conf -a",
                      'sudo /opt/puppetlabs/bin/puppet agent --test']
     elif "leaf" in host or "spine" in host:
         commands =  ['sudo wget https://apt.puppetlabs.com/puppetlabs-release-pc1-jessie.deb',
                      'sudo dpkg -i puppetlabs-release-pc1-jessie.deb',
                      'sudo apt-get update',
                      'sudo apt-get install puppet-agent -qy',
-                     "sudo echo 'server = server01.lab.local' | sudo tee /etc/puppetlabs/puppet/puppet.conf -a",
+                     "sudo echo 'server = server01' | sudo tee /etc/puppetlabs/puppet/puppet.conf -a",
                      'sudo /opt/puppetlabs/bin/puppet agent --test']
     
     for line in commands:
