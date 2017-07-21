@@ -17,6 +17,7 @@ Before running this demo, install [VirtualBox](https://www.virtualbox.org/wiki/D
     git clone https://github.com/cumulusnetworks/cldemo-automation-puppet
     cd cldemo-automation-puppet
     sudo su
+    sudo apt-get install python-paramiko
     wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
     dpkg -i puppetlabs-release-pc1-xenial.deb
     apt-get update
