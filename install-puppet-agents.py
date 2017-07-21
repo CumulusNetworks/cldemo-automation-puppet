@@ -36,7 +36,7 @@ def go(host):
         stdin, stdout, stderr = expect.exec_command(line, get_pty=True)
         stdout.channel.recv_exit_status()
         print("%s: %s"%(host, line))
-    os.system('sudo /opt/puppetlabs/bin/puppet cert sign %s.lab.local'%host)
+    os.system('sudo /opt/puppetlabs/bin/puppet cert sign %s'%host)
     for line in ['sudo /opt/puppetlabs/bin/puppet agent --test',
                  'sudo service puppet start']:
         stdin, stdout, stderr = expect.exec_command(line, get_pty=True)
